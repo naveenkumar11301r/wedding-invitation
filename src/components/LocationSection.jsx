@@ -12,7 +12,23 @@ export default function LocationSection() {
         <section id="location" className="relative py-8 md:py-12 px-6 flex flex-col items-center justify-center z-10 text-center">
 
             <div className="flex items-center gap-4 mb-8">
-                <span className="font-body text-sm tracking-widest font-bold text-[var(--color-rose-ink)]/90 uppercase">The Venue</span>
+                <span className="font-body text-base md:text-lg tracking-[0.4em] font-black text-[#2D1B24] uppercase flex">
+                    {Array.from("The Venue").map((l, i) => (
+                        <motion.span
+                            key={i}
+                            animate={{ y: [0, -6, 0] }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: i * 0.1,
+                                ease: "easeInOut"
+                            }}
+                            style={{ display: "inline-block", whiteSpace: "pre", textShadow: "0px 4px 10px rgba(45,27,36,0.2)" }}
+                        >
+                            {l}
+                        </motion.span>
+                    ))}
+                </span>
                 <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ repeat: Infinity, duration: 15, ease: "linear" }}

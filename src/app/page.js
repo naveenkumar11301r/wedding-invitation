@@ -6,7 +6,7 @@ import OpeningExperience from "../components/OpeningExperience";
 import MusicPlayer from "../components/MusicPlayer";
 import ReceptionDetails from "../components/ReceptionDetails";
 import LocationSection from "../components/LocationSection";
-import QRCodeSection from "../components/QRCodeSection";
+import CountdownTimer from "../components/CountdownTimer";
 import ClosingMessage from "../components/ClosingMessage";
 import Footer from "../components/Footer";
 
@@ -46,7 +46,7 @@ export default function Home() {
           <>
             <ReceptionDetails />
             <LocationSection />
-            <QRCodeSection />
+            <CountdownTimer />
             <ClosingMessage />
             <Footer />
           </>

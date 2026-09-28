@@ -21,7 +21,23 @@ export default function QRCodeSection() {
                 >
                     <BloomMotif size={48} onBloomComplete={() => setContentVisible(true)} />
                 </motion.div>
-                <span className="font-body text-sm tracking-widest font-bold text-[var(--color-rose-ink)]/90 uppercase">Find Us Instantly</span>
+                <span className="font-body text-base md:text-lg tracking-[0.4em] font-black text-[#2D1B24] uppercase flex">
+                    {Array.from("Find Us Instantly").map((l, i) => (
+                        <motion.span
+                            key={i}
+                            animate={{ y: [0, -6, 0] }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: i * 0.1,
+                                ease: "easeInOut"
+                            }}
+                            style={{ display: "inline-block", whiteSpace: "pre", textShadow: "0px 4px 10px rgba(45,27,36,0.2)" }}
+                        >
+                            {l}
+                        </motion.span>
+                    ))}
+                </span>
             </div>
 
             <motion.div

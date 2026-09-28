@@ -10,11 +10,11 @@ export const weddingData = {
         startTime: "6:00 PM",
         endTime: "10:00 PM",
         venue: "Shree Vasuki Mahal",
-        address: "Shree Vasuki Mahal, opposite to Vivek Vidyalaya School, Ezhur Pirivu, Kinathukadavu (Pollachi Main Road).",
+        address: "Opposite to Vivek Vidyalaya School, Ezhur Pirivu, Kinathukadavu (Pollachi Main Road), Coimbatore.",
         mapUrl: "https://maps.google.com/maps?q=Shree+Vasuki+Mahal,+Kinathukadavu&t=&z=15&ie=UTF8&iwloc=&output=embed" // Embed URL
     },
     music: {
-        src: "/kaaara.mp3",
+        src: "/Kaaara-2.mp3",
         title: "Our Song",
         enabled: true
     },

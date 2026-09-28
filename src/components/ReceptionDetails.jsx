@@ -56,7 +56,23 @@ export default function ReceptionDetails() {
                     >
                         <BloomMotif size={48} onBloomComplete={() => setContentVisible(true)} />
                     </motion.div>
-                    <span className="font-body text-sm tracking-widest font-bold text-[var(--color-rose-ink)]/90 uppercase">The Evening</span>
+                    <span className="font-body text-base md:text-lg tracking-[0.4em] font-black text-[#2D1B24] uppercase flex">
+                        {Array.from("The Evening").map((l, i) => (
+                            <motion.span
+                                key={i}
+                                animate={{ y: [0, -6, 0] }}
+                                transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    delay: i * 0.1,
+                                    ease: "easeInOut"
+                                }}
+                                style={{ display: "inline-block", whiteSpace: "pre", textShadow: "0px 4px 10px rgba(45,27,36,0.2)" }}
+                            >
+                                {l}
+                            </motion.span>
+                        ))}
+                    </span>
                 </div>
 
                 <motion.div
@@ -71,9 +87,46 @@ export default function ReceptionDetails() {
                     <p className="font-body text-[var(--color-rose-ink)]/80 text-lg mb-8">
                         {weddingData.reception.startTime} to {weddingData.reception.endTime}
                     </p>
-                    <p className="font-body tracking-widest font-bold uppercase text-[var(--color-rose-ink)] drop-shadow-[0_0_12px_rgba(242,168,198,0.8)]">
-                        {weddingData.reception.venue}
-                    </p>
+                    <div className="font-body tracking-widest font-bold uppercase drop-shadow-[0_0_12px_rgba(242,168,198,0.8)] flex justify-center flex-wrap" style={{ perspective: "1000px" }}>
+                        {weddingData.reception.venue.split(" ").map((word, wIdx) => (
+                            <span key={wIdx} className="flex mr-2 last:mr-0 z-30">
+                                {word.split("").map((char, cIdx) => {
+                                    const charIndex = wIdx * 10 + cIdx;
+                                    return (
+                                        <motion.span
+                                            key={cIdx}
+                                            initial={{ opacity: 0, y: 30, rotateX: 45, filter: "blur(8px)", color: "var(--color-rose-ink)", textShadow: "0px 0px 12px rgba(242,168,198,0.8)" }}
+                                            whileInView={{
+                                                opacity: 1,
+                                                y: 0,
+                                                rotateX: 0,
+                                                filter: "blur(0px)",
+                                                color: ["var(--color-rose-ink)", "var(--color-rose-ink)", "#D8AD66", "var(--color-rose-ink)"],
+                                                textShadow: [
+                                                    "0px 0px 12px rgba(242,168,198,0.8)",
+                                                    "0px 0px 12px rgba(242,168,198,0.8)",
+                                                    "0px 0px 20px rgba(216,173,102,1)",
+                                                    "0px 0px 12px rgba(242,168,198,0.8)"
+                                                ]
+                                            }}
+                                            viewport={{ once: true, margin: "-50px" }}
+                                            transition={{
+                                                opacity: { duration: 0.8, delay: charIndex * 0.05, ease: "easeOut" },
+                                                y: { duration: 0.8, delay: charIndex * 0.05, type: "spring", damping: 15 },
+                                                rotateX: { duration: 0.8, delay: charIndex * 0.05, type: "spring" },
+                                                filter: { duration: 0.8, delay: charIndex * 0.05 },
+                                                color: { repeat: Infinity, duration: 4, ease: "easeInOut", delay: (charIndex * 0.05) + 0.8, times: [0, 0.1, 0.2, 1] },
+                                                textShadow: { repeat: Infinity, duration: 4, ease: "easeInOut", delay: (charIndex * 0.05) + 0.8, times: [0, 0.1, 0.2, 1] }
+                                            }}
+                                            style={{ display: "inline-block", whiteSpace: "pre" }}
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    );
+                                })}
+                            </span>
+                        ))}
+                    </div>
                     <p className="font-body text-[var(--color-rose-ink)]/70 text-sm mt-3 max-w-sm mx-auto leading-relaxed mb-8">
                         {weddingData.reception.address}
                     </p>
