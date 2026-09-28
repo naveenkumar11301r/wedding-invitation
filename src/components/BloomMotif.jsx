@@ -16,7 +16,7 @@ export default function BloomMotif({ className = "", size = 64, onBloomComplete 
                     if (onBloomComplete) setTimeout(onBloomComplete, 600); // Trigger follow-through action slightly after bloom starts
                 }
             }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-10px" }}
         >
             {/* 5 Petals unfurling */}
             {[0, 72, 144, 216, 288].map((rot, i) => (
