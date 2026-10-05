@@ -81,8 +81,9 @@ export default function ReceptionDetails() {
                     transition={{ duration: 1 }}
                     className="max-w-xl w-full bg-[var(--color-blossom-light)]/20 p-8 md:p-12 rounded-[40px] relative z-30 shadow-sm"
                 >
-                    <h2 className="font-heading text-3xl md:text-4xl text-[var(--color-rose-ink)] mb-4 italic">
-                        {weddingData.reception.day}, {weddingData.reception.date}
+                    <h2 className="font-heading text-3xl md:text-4xl text-[var(--color-rose-ink)] mb-4 italic flex flex-col items-center gap-1">
+                        <span>{weddingData.reception.day}</span>
+                        <span>{weddingData.reception.date}</span>
                     </h2>
                     <p className="font-body text-[var(--color-rose-ink)]/80 text-lg mb-8">
                         {weddingData.reception.startTime} to {weddingData.reception.endTime}

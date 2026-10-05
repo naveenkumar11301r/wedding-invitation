@@ -104,7 +104,7 @@ export default function OpeningExperience({ onBloomComplete }) {
                             </h1>
 
                             <div className="w-full flex justify-center lg:justify-end lg:pr-[25%] opacity-90 z-10 my-4 lg:my-0">
-                                <span className="font-heading not-italic text-4xl md:text-5xl text-[var(--color-gold)]">&</span>
+                                <span className="font-heading not-italic text-4xl md:text-5xl text-[var(--color-rose-ink)] lg:text-[var(--color-gold)]">&</span>
                             </div>
 
                             <h1 className="font-script text-7xl md:text-8xl lg:text-[140px] text-[var(--color-rose-ink)] leading-[0.7] transform -rotate-3 w-full text-center lg:text-right mt-2 lg:mt-4 mix-blend-multiply">
