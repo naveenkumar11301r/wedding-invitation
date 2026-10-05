@@ -120,7 +120,7 @@ export default function OpeningExperience({ onBloomComplete }) {
                             className="font-body text-[var(--color-rose-ink)] flex flex-col items-center lg:items-end text-center lg:text-right mt-16 lg:mt-24 w-full"
                         >
                             <div className="hidden lg:block w-32 h-[1px] bg-[var(--color-gold)]/40 mb-8" />
-                            <p className="tracking-[0.2em] uppercase text-xs md:text-sm font-semibold mb-4 text-[var(--color-rose-ink)]/90">Invite you to celebrate our wedding</p>
+                            <p className="tracking-[0.2em] uppercase text-xs md:text-sm font-semibold mb-4 text-[var(--color-rose-ink)]/90">Invite you to celebrate our wedding Reception</p>
                             <p className="text-xl md:text-2xl mb-1 font-heading italic text-[var(--color-rose-ink)] tracking-wider">
                                 {weddingData.reception.day}, {weddingData.reception.date}
                             </p>

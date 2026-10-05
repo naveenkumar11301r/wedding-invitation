@@ -65,7 +65,7 @@ export default function Hero() {
                             </h1>
 
                             <p className="text-[var(--color-jasmine)]/70 text-sm md:text-base tracking-widest uppercase font-sans mt-12 mb-4 relative z-40">
-                                invite you to celebrate Our wedding
+                                invite you to celebrate Our wedding Reception
                             </p>
 
                             <p className="text-xl md:text-2xl font-serif text-[var(--color-manjal)] relative z-40">
